@@ -5,47 +5,79 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    background-color: lavenderblush;
 }
 
 .calculator {
     width: 400px;
-    padding: 20px;
-    margin: 2px;
-    border: 4px solid black;
+    padding: 30px;
+    margin: 4px;
+    border: 7px double black;
     border-radius: 5px;
-    background-color: rgb(209, 145, 203);
 }
 
 #display {
-    width: 95%;
+    width: 94%;
     margin-bottom: 10px;
     padding: 10px;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: oblique;
     cursor: text;
+    color: rgb(1, 30, 30);
     border: 2px solid black;
     
 
 }
 
 #display:focus {
-    border: 2px solid #59075d;
+    border: 2px solid #097b2d;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    background-color: plum;
+    background-color: rgb(161, 199, 205);
     padding: 10px;
 }
 
 button {
     padding: 10px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: initial;
+    color: black;
     background-color: ghostwhite;
 }
 
 .wide {
     grid-column: span 2;
 }
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .animated-background {
+    animation: math-animation 10s ease infinite;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(https://media.istockphoto.com/id/1281765492/vector/seamless-doodle-pattern-with-school-algebra-elements.jpg?s=2048x2048&w=is&k=20&c=XZZgcUyK-Ubz0xJFmPuTu6P-n4rck4wGgLacCTke-dE=);
+    background-size: 50% 50%;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+
+  @keyframes math-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
